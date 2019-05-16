@@ -4,7 +4,7 @@
 
 // constantes
 u = 1e-3;           // unidade = mm
-mm = 1e-3;
+mm = 1e-3;          // milimetros
 cm = 1e-2;          // unidade 
 deg2rad = Pi/180;   // graus para radianos
 

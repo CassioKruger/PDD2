@@ -5,6 +5,12 @@
 Solver.AutoShowLastStep = 1;
 Mesh.Algorithm = 1;
 
+// constantes
+u = 1e-3;           // unidade = mm
+mm = 1e-3;          // milimetros
+cm = 1e-2;          // unidade 
+deg2rad = Pi/180;   // graus para radianos
+
 // some characteristic lengths...
 pslo = mm * 3*2/2/1.5;  // slot opening
 psl  = mm * 2.2;        // upper part slot

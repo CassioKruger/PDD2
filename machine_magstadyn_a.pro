@@ -337,18 +337,19 @@ Constraint {
         { Region Surf_cutA1; SubRegion Region[{Surf_Inf,Surf_bn0, Point_ref}]; Type Link;
           RegionRef Surf_cutA0; SubRegionRef Region[{Surf_Inf,Surf_bn0, Point_ref}];
           Coefficient ((NbrPolesInModel%2)?-1:1) ;
-	  Function RotatePZ[-NbrPolesInModel*2*Pi/NbrPolesTot]; }
+	        Function RotatePZ[-NbrPolesInModel*2*Pi/NbrPolesTot]; }
+          
         { Region Surf_cutA1; Type Link; RegionRef Surf_cutA0;
           Coefficient (NbrPolesInModel%2)?-1:1 ;
-	  Function RotatePZ[-NbrPolesInModel*2*Pi/NbrPolesTot]; }
+	        Function RotatePZ[-NbrPolesInModel*2*Pi/NbrPolesTot]; }
 
         //For the moving band
         For k In {1:SymmetryFactor-1}
         { Region Rotor_Bnd_MB~{k+1} ;
-	  SubRegion Rotor_Bnd_MB~{(k!=SymmetryFactor-1)?k+2:1}; Type Link;
+	        SubRegion Rotor_Bnd_MB~{(k!=SymmetryFactor-1)?k+2:1}; Type Link;
           RegionRef Rotor_Bnd_MB_1; SubRegionRef Rotor_Bnd_MB_2;
           Coefficient ((NbrPolesInModel%2)?-1:1)^(k);
-	  Function RotatePZ[-k*NbrPolesInModel*2*Pi/NbrPolesTot]; }
+	        Function RotatePZ[-k*NbrPolesInModel*2*Pi/NbrPolesTot]; }
         EndFor
 
       EndIf
